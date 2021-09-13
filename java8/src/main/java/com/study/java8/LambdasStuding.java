@@ -20,5 +20,14 @@ public class LambdasStuding {
 
         List<String> stings = Arrays.asList("there", "how", "new job");
         stings.forEach(str -> System.out.println(str));
+
+        List<Runnable> lambdaFunctions = Arrays.asList(
+                () -> System.out.println("I going to school"),
+                () -> System.out.println("Next year all will better again"),
+                () -> {
+                    System.out.println("tomorrow I have new tasks");
+                }
+        );
+        lambdaFunctions.forEach((functions) -> new Thread(functions).start());
     }
 }
