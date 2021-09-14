@@ -12,10 +12,10 @@ public class LambdasStuding {
                 System.out.println("java 8 function");
             }
         };
-        new Thread(run).start();
+        run.run();
 
         Runnable runnable = () -> System.out.println("java 8 lambda parameter");
-        new Thread(runnable).start();
+        runnable.run();
 
         new Thread(() -> System.out.println("java 8 lambda")).start();
 
@@ -35,6 +35,6 @@ public class LambdasStuding {
                     System.out.println("tomorrow I have new tasks");
                 }
         );
-        lambdaFunctions.forEach((functions) -> new Thread(functions).start());
+        lambdaFunctions.forEach(Runnable::run);
     }
 }
