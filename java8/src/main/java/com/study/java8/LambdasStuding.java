@@ -2,6 +2,7 @@ package com.study.java8;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class LambdasStuding {
     public void execute() {
@@ -20,6 +21,12 @@ public class LambdasStuding {
 
         List<String> stings = Arrays.asList("there", "how", "new job");
         stings.forEach(str -> System.out.println(str));
+
+        var result = stings.stream()
+                .filter(str -> str.startsWith("h"))
+                .collect(Collectors.toList());
+
+        result.forEach(MethodReferences::say);
 
         List<Runnable> lambdaFunctions = Arrays.asList(
                 () -> System.out.println("I going to school"),
