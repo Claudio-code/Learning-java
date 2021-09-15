@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 public class LambdasStuding {
     public void execute() {
+        // java 7
         Runnable run = new Runnable() {
             @Override
             public void run() {
@@ -13,6 +14,8 @@ public class LambdasStuding {
             }
         };
         run.run();
+
+        ////////////////////////
 
         Runnable runnable = () -> System.out.println("java 8 lambda parameter");
         runnable.run();
@@ -36,5 +39,12 @@ public class LambdasStuding {
                 }
         );
         lambdaFunctions.forEach(Runnable::run);
+
+        MyInterface myInterface = (String s) -> {
+            System.out.println("It is the beast feature " + s + " \n\n");
+        };
+        myInterface.print("there");
+        myInterface.body();
+        stings.forEach(myInterface::print);
     }
 }
