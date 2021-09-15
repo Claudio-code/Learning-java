@@ -22,7 +22,7 @@ public class LambdasStuding {
         List<String> stings = Arrays.asList("there", "how", "new job");
         stings.forEach(str -> System.out.println(str));
 
-        var result = stings.stream()
+        List<String> result = stings.stream()
                 .filter(str -> str.startsWith("h"))
                 .collect(Collectors.toList());
 
