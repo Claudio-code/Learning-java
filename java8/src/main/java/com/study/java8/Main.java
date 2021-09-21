@@ -7,5 +7,8 @@ public class Main {
 
         OptionalStuding optionalStuding = new OptionalStuding();
         optionalStuding.execute();
+
+        DateExamples dateExamples = new DateExamples();
+        dateExamples.execute();
     }
 }
