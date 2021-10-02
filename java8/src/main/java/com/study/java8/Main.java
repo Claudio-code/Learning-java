@@ -10,5 +10,8 @@ public class Main {
 
         DateExamples dateExamples = new DateExamples();
         dateExamples.execute();
+
+        TesteEnum testeEnum = new TesteEnum();
+        testeEnum.execute();
     }
 }
